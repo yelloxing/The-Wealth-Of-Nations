@@ -1,0 +1,157 @@
+<template>
+    <div class="menu-view">
+        <div>
+            <a href="https://knowpedia.github.io/entry/" target="_blank" class='knowpedia'></a>
+            <h2>《国富论》</h2>
+            <ul :active='pagename=="labour"?"yes":"no"'>
+                <li>
+                    <h3 @click='openPage("labour","top")'>
+                        卷一 论劳动生产力增进的原因，并论劳动生产物自然分配给各阶级人民的顺序
+                    </h3>
+                </li>
+            </ul>
+            <ul :active='pagename=="wealth"?"yes":"no"'>
+                <li>
+                    <h3 @click='openPage("wealth","top")'>
+                        卷二 财富的性质、积累和用途
+                    </h3>
+                </li>
+            </ul>
+            <ul :active='pagename=="development"?"yes":"no"'>
+                <li>
+                    <h3 @click='openPage("development","top")'>
+                        卷三 不同国家中财富的不同发展
+                    </h3>
+                </li>
+            </ul>
+            <ul :active='pagename=="polity"?"yes":"no"'>
+                <li>
+                    <h3 @click='openPage("polity","top")'>
+                        卷四 政治经济学体系
+                    </h3>
+                </li>
+            </ul>
+            <ul :active='pagename=="earning"?"yes":"no"'>
+                <li>
+                    <h3 @click='openPage("earning","top")'>
+                        卷五 君主或国家队收入
+                    </h3>
+                </li>
+            </ul>
+            <a href="https://github.com/knowpedia/The-Wealth-Of-Nations" target="_blank">Fork Me On Github</a>
+        </div>
+    </div>
+    <div class="content">
+        <div id='root-view'>
+            <component :is='page'></component>
+        </div>
+    </div>
+</template>
+<script>
+    import fixedScroll from './Service/fixedScroll.js';
+
+    let pages = {
+        labour: () => import('./labour.paper'),
+        wealth: () => import('./wealth.paper'),
+        development: () => import('./development.paper'),
+        polity: () => import('./polity.paper'),
+        earning: () => import('./earning.paper')
+    };
+
+    export default {
+        data() {
+            return {
+                page: null,
+                pagename: ""
+            };
+        },
+        mounted() {
+            let routerString = (window.location.href + "").split('#/')[1];
+            let pagename = 'labour', fixedName = 'top';
+            if (routerString) {
+                let temp = routerString.split('/');
+                if (temp[0] in pages) pagename = temp[0];
+                fixedName = temp[1] || "top";
+            }
+            this.openPage(pagename, fixedName);
+        },
+        methods: {
+            openPage(pagename, fixedName) {
+                pages[pagename]().then(data => {
+                    this.page = data.default;
+                    this.pagename = pagename;
+                    window.location.href = "#/" + pagename + "/" + fixedName;
+                    fixedScroll();
+                });
+            },
+            doScroll(fixedName) {
+                window.location.href = "#/" + this.pagename + "/" + fixedName;
+                fixedScroll();
+            }
+        }
+    };
+
+</script>
+<style>
+    [quickpaper] {
+        white-space: nowrap;
+
+        &>div {
+            display: inline-block;
+            vertical-align: top;
+            white-space: normal;
+            height: 100vh;
+
+            &.menu-view {
+                width: 300px;
+                position: fixed;
+                left: 0;
+                top: 0;
+                background-color: white;
+
+                &>div {
+                    [active='no']>li {
+                        &>ul {
+                            display: none;
+                        }
+
+                    }
+
+                    [active='yes']>li {
+                        &>h3 {
+                            font-weight: 800;
+
+                        }
+                    }
+
+                    &>a {
+                        background-color: #529bcf;
+                        color: white;
+                        text-align: center;
+                        margin-top: .3rem;
+                        cursor: pointer;
+                        font-size: .15rem;
+                        display: block;
+                        width: 2.6rem;
+                        padding: .1rem 0;
+
+                        &.knowpedia {
+                            background-image: url('./assets/logo.png');
+                            height: 150px;
+                            background-color: transparent;
+                            background-size: auto 100%;
+                            background-position: center;
+                            margin-top: 0;
+                            background-repeat: no-repeat;
+                        }
+                    }
+                }
+            }
+
+            &.content {
+                margin-left: 300px;
+                width: calc(100vw - 300px);
+            }
+        }
+    }
+</style>
