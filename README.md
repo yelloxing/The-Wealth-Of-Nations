@@ -1,6 +1,5 @@
 # The-Wealth-Of-Nations
-国富论，主要是一些读书笔记和反思心得等。
-
+国富论，包括分工、资本、政治经济学、国家收入等资本主义自由经济理论基础知识。
 
 ## Issues
 使用的时候遇到任何问题或有好的建议，请点击进入[issue](https://github.com/knowpedia/The-Wealth-Of-Nations/issues)，欢迎参与维护！
