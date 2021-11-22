@@ -8,6 +8,13 @@
                     <h3 @click='openPage("labour","top")'>
                         卷一 论劳动生产力增进的原因，并论劳动生产物自然分配给各阶级人民的顺序
                     </h3>
+                    <ul>
+                        <li>
+                            <h3 @click='doScroll("lddfg")'>
+                                第一章 劳动的分工
+                            </h3>
+                        </li>
+                    </ul>
                 </li>
             </ul>
             <ul :active='pagename=="wealth"?"yes":"no"'>
