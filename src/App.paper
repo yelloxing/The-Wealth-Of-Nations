@@ -19,6 +19,11 @@
                                 第二章 劳动分工的根源
                             </h3>
                         </li>
+                        <li>
+                            <h3 @click='doScroll("ldfgsscdxdxz")'>
+                                第三章 劳动分工受市场大小的限制
+                            </h3>
+                        </li>
                     </ul>
                 </li>
             </ul>

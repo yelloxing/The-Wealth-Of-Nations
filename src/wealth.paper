@@ -4,17 +4,3 @@
 
     </div>
 </template>
-<script>
-    export default {
-        data() {
-            return {
-                mathFormulas: {}
-            };
-        },
-        mounted() {
-            this.mathFormulas = [
-
-            ];
-        },
-    };
-</script>
