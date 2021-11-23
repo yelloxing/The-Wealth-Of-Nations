@@ -14,6 +14,11 @@
                                 第一章 劳动的分工
                             </h3>
                         </li>
+                        <li>
+                            <h3 @click='doScroll("ldfgdgy")'>
+                                第二章 劳动分工的根源
+                            </h3>
+                        </li>
                     </ul>
                 </li>
             </ul>
