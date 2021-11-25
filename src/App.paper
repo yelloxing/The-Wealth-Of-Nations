@@ -6,58 +6,35 @@
             <ul :active='pagename=="labour"?"yes":"no"'>
                 <li>
                     <h3 @click='openPage("labour","top")'>
-                        卷一 论劳动生产力增进的原因，并论劳动生产物自然分配给各阶级人民的顺序
+                        论劳动生产力增进的原因，并论劳动生产物自然分配给各阶级人民的顺序
                     </h3>
                     <ul>
                         <li>
-                            <h3 @click='doScroll("lddfg")'>
-                                第一章 劳动的分工
-                            </h3>
+                            <h4 @click='doScroll("lddfg")'>
+                                劳动的分工
+                            </h4>
                         </li>
                         <li>
-                            <h3 @click='doScroll("ldfgdgy")'>
-                                第二章 劳动分工的根源
-                            </h3>
+                            <h4 @click='doScroll("ldfgdgy")'>
+                                劳动分工的根源
+                            </h4>
                         </li>
                         <li>
-                            <h3 @click='doScroll("ldfgsscdxdxz")'>
-                                第三章 劳动分工受市场大小的限制
-                            </h3>
+                            <h4 @click='doScroll("ldfgsscdxdxz")'>
+                                劳动分工受市场大小的限制
+                            </h4>
                         </li>
                         <li>
-                            <h3 @click='doScroll("hbdqyjqgn")'>
-                                第四章 货币的起源及其功用
-                            </h3>
+                            <h4 @click='doScroll("hbdqyjqgn")'>
+                                货币的起源及其功用
+                            </h4>
+                        </li>
+                        <li>
+                            <h4 @click='doScroll("hpdzsjghmyjg")'>
+                                商品的真实价格和名义价格或其劳动价格及货币价格
+                            </h4>
                         </li>
                     </ul>
-                </li>
-            </ul>
-            <ul :active='pagename=="wealth"?"yes":"no"'>
-                <li>
-                    <h3 @click='openPage("wealth","top")'>
-                        卷二 财富的性质、积累和用途
-                    </h3>
-                </li>
-            </ul>
-            <ul :active='pagename=="development"?"yes":"no"'>
-                <li>
-                    <h3 @click='openPage("development","top")'>
-                        卷三 不同国家中财富的不同发展
-                    </h3>
-                </li>
-            </ul>
-            <ul :active='pagename=="polity"?"yes":"no"'>
-                <li>
-                    <h3 @click='openPage("polity","top")'>
-                        卷四 政治经济学体系
-                    </h3>
-                </li>
-            </ul>
-            <ul :active='pagename=="earning"?"yes":"no"'>
-                <li>
-                    <h3 @click='openPage("earning","top")'>
-                        卷五 君主或国家队收入
-                    </h3>
                 </li>
             </ul>
             <a href="https://github.com/knowpedia/The-Wealth-Of-Nations" target="_blank">Fork Me On Github</a>
@@ -73,11 +50,7 @@
     import fixedScroll from './Service/fixedScroll.js';
 
     let pages = {
-        labour: () => import('./labour.paper'),
-        wealth: () => import('./wealth.paper'),
-        development: () => import('./development.paper'),
-        polity: () => import('./polity.paper'),
-        earning: () => import('./earning.paper')
+        labour: () => import('./labour.paper')
     };
 
     export default {
