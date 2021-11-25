@@ -24,6 +24,11 @@
                                 第三章 劳动分工受市场大小的限制
                             </h3>
                         </li>
+                        <li>
+                            <h3 @click='doScroll("hbdqyjqgn")'>
+                                第四章 货币的起源及其功用
+                            </h3>
+                        </li>
                     </ul>
                 </li>
             </ul>
