@@ -1,4 +1,4 @@
-# The-Wealth-Of-Nations
+# [The-Wealth-Of-Nations](https://knowpedia.github.io/The-Wealth-Of-Nations)
 国富论，包括分工、资本、政治经济学、国家收入等资本主义自由经济理论基础知识。
 
 ## Issues
