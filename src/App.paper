@@ -39,6 +39,11 @@
                                 商品价格的组成部分
                             </h4>
                         </li>
+                        <li>
+                            <h4 @click='doScroll("spdzrjghscjg")'>
+                                商品的自然价格和市场价格
+                            </h4>
+                        </li>
                     </ul>
                 </li>
             </ul>
