@@ -44,6 +44,11 @@
                                 商品的自然价格和市场价格
                             </h4>
                         </li>
+                        <li>
+                            <h4 @click='doScroll("ldgz")'>
+                                劳动工资
+                            </h4>
+                        </li>
                     </ul>
                 </li>
             </ul>
