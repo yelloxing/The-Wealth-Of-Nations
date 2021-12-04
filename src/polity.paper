@@ -1,0 +1,6 @@
+<template>
+    <div class='doc-view' id='root-view'>
+        <header id="fixed-top">政治经济学体系</header>
+
+    </div>
+</template>

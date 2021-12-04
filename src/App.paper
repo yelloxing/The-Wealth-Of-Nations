@@ -52,6 +52,41 @@
                     </ul>
                 </li>
             </ul>
+            <ul :active='pagename=="wealth"?"yes":"no"'>
+                <li>
+                    <h3 @click='openPage("wealth","top")'>
+                        财富的性质、积累和用途
+                    </h3>
+                    <ul>
+                        <li>
+                            <h4 @click='doScroll("zcdhf")'>
+                                资财的划分
+                            </h4>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul :active='pagename=="development"?"yes":"no"'>
+                <li>
+                    <h3 @click='openPage("development","top")'>
+                        不同国家中财富的不同发展
+                    </h3>
+                </li>
+            </ul>
+            <ul :active='pagename=="polity"?"yes":"no"'>
+                <li>
+                    <h3 @click='openPage("polity","top")'>
+                        政治经济学体系
+                    </h3>
+                </li>
+            </ul>
+            <ul :active='pagename=="earning"?"yes":"no"'>
+                <li>
+                    <h3 @click='openPage("earning","top")'>
+                        君主或国家队收入
+                    </h3>
+                </li>
+            </ul>
             <a href="https://github.com/knowpedia/The-Wealth-Of-Nations" target="_blank">Fork Me On Github</a>
         </div>
     </div>
@@ -65,7 +100,11 @@
     import fixedScroll from './Service/fixedScroll.js';
 
     let pages = {
-        labour: () => import('./labour.paper')
+        labour: () => import('./labour.paper'),
+        wealth: () => import('./wealth.paper'),
+        development: () => import('./development.paper'),
+        polity: () => import('./polity.paper'),
+        earning: () => import('./earning.paper')
     };
 
     export default {

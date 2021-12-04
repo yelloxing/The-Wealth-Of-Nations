@@ -1,0 +1,6 @@
+<template>
+    <div class='doc-view' id='root-view'>
+        <header id="fixed-top">不同国家中财富的不同发展</header>
+
+    </div>
+</template>
