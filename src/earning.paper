@@ -1,6 +1,17 @@
 <template>
     <div class='doc-view' id='root-view'>
         <header id="fixed-top">君主或国家队收入</header>
-
+        <h1 id='fixed-jzhgjdfy'>
+            君主或国家的费用
+        </h1>
+        <h2 id='fixed-lgff'>
+            论国防费
+        </h2>
+        <p>
+            君主的义务，首先是保护本国社会的安全，使之不受其他独立社会的暴行与侵略。
+        </p>
+        <p>
+            而这种义务的完成，又只有借助于兵力。平时准备兵力和战时准备兵力的费用，因社会状态不同以及进化时期不同，而呈现出许多的不同。
+        </p>
     </div>
 </template>

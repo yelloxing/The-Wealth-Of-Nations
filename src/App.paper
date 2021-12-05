@@ -92,6 +92,20 @@
                     <h3 @click='openPage("earning","top")'>
                         君主或国家队收入
                     </h3>
+                    <ul>
+                        <li>
+                            <h4 @click='doScroll("jzhgjdfy")'>
+                                君主或国家的费用
+                            </h4>
+                            <ul>
+                                <li>
+                                    <h4 @click='doScroll("lgff")'>
+                                        论国防费
+                                    </h4>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
                 </li>
             </ul>
             <a href="https://github.com/knowpedia/The-Wealth-Of-Nations" target="_blank">Fork Me On Github</a>
