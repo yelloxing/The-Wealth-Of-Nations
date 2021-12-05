@@ -71,6 +71,13 @@
                     <h3 @click='openPage("development","top")'>
                         不同国家中财富的不同发展
                     </h3>
+                    <ul>
+                        <li>
+                            <h4 @click='doScroll("cfdzrfz")'>
+                                财富的自然发展
+                            </h4>
+                        </li>
+                    </ul>
                 </li>
             </ul>
             <ul :active='pagename=="polity"?"yes":"no"'>
